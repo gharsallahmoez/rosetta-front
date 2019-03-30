@@ -18,6 +18,7 @@ class App extends Component {
     <Provider store={store}>
     <Router>
     <div className="App">
+
     <Header />
     <Route exact path={"/dashboard"}  component={Dashboard}/>
     <Route exact path={"/addCollection"}  component={AddCollection}/>
