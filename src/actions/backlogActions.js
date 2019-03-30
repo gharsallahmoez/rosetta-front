@@ -5,7 +5,7 @@ import {axiosInstance_baseURL} from "../webConfig"
 export const addShoe = (backlog_id, shoe, history)=> async dispatch => {
     try{
         await axios.post(`${axiosInstance_baseURL}/api/backlog/${backlog_id}`, shoe);
-        history.push(`${axiosInstance_baseURL}/collectionBoard/${backlog_id}`);
+        history.push(`/collectionBoard/${backlog_id}`);
         dispatch({
             type:GET_ERRORS,
             payload:{}
