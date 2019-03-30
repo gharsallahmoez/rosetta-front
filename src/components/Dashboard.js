@@ -10,7 +10,6 @@ class Dashboard extends Component {
     }
     render() {
         const { collections } = this.props.collection;
-        console.log(this.props);
         return (
             <div className="projects">
                 <div className="container">

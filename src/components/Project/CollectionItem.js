@@ -26,7 +26,7 @@ class CollectionItem extends Component {
                             <ul className="list-group">
                                 <Link to={`/collectionBoard/${collection.collectionIdentifier}`}>
                                     <li className="list-group-item board">
-                                        <i className="fa fa-flag-checkered pr-1"> Collection Board </i>
+                                        <i className="fa fa-flag-checkered pr-1"> Tableau des Collections </i>
                                     </li>
                                 </Link>
                                 <Link to={`/updateCollection/${collection.collectionIdentifier}`}>
