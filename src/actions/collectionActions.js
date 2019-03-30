@@ -4,7 +4,7 @@ import {GET_ERRORS, GET_COLLECTION, GET_COLLECTIONS , DELETE_COLLECTION} from ".
 
 export const createCollection = (collection, history) => async dispatch => {
     try {
-        await axios.post("/api/collection",collection)
+        await axios.post("https://rosetta.cfapps.io/api/collection",collection)
         history.push("/dashboard");
         dispatch({
             type:GET_ERRORS,
@@ -19,7 +19,7 @@ export const createCollection = (collection, history) => async dispatch => {
 }
 
 export const getCollections = () => async dispatch => {
-    const res = await axios.get("/api/collection/all");
+    const res = await axios.get("https://rosetta.cfapps.io/api/collection/all");
     dispatch({
         type: GET_COLLECTIONS,
         payload: res.data
@@ -29,7 +29,7 @@ export const getCollections = () => async dispatch => {
 
 export const getCollection = (id, history)  => async dispatch => {
     try {
-        const res = await axios.get(`/api/collection/${id}`);
+        const res = await axios.get(`https://rosetta.cfapps.io/api/collection/${id}`);
         dispatch({
             type: GET_COLLECTION,
             payload: res.data
@@ -41,7 +41,7 @@ export const getCollection = (id, history)  => async dispatch => {
     export const deleteCollection = id => async dispatch =>{
     if(window.confirm("vous ete sure de supprimer cette collection ?"))
     {
-        await axios.delete(`/api/collection/${id}`);
+        await axios.delete(`https://rosetta.cfapps.io/api/collection/${id}`);
         dispatch({
             type : DELETE_COLLECTION,
             payload : id

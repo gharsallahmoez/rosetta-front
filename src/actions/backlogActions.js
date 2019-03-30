@@ -4,8 +4,8 @@ import {GET_ERRORS, GET_BACKLOG, GET_SHOE, DELETE_SHOE} from "./types";
 
 export const addShoe = (backlog_id, shoe, history)=> async dispatch => {
     try{
-        await axios.post(`/api/backlog/${backlog_id}`, shoe);
-        history.push(`/collectionBoard/${backlog_id}`);
+        await axios.post(`https://rosetta.cfapps.io/api/backlog/${backlog_id}`, shoe);
+        history.push(`https://rosetta.cfapps.io/collectionBoard/${backlog_id}`);
         dispatch({
             type:GET_ERRORS,
             payload:{}
@@ -20,7 +20,7 @@ export const addShoe = (backlog_id, shoe, history)=> async dispatch => {
 
 export const getBacklog = backlog_id => async dispatch => {
     try {
-        const res = await axios.get(`/api/backlog/${backlog_id}`)
+        const res = await axios.get(`https://rosetta.cfapps.io/api/backlog/${backlog_id}`)
         dispatch({
             type : GET_BACKLOG,
             payload : res.data
@@ -35,7 +35,7 @@ export const getBacklog = backlog_id => async dispatch => {
 
 export const getShoe = (backlog_id, pt_id, history) => async dispatch => {
     try{
-        const res = await axios.get(`/api/backlog/${backlog_id}/${pt_id}`);
+        const res = await axios.get(`https://rosetta.cfapps.io/api/backlog/${backlog_id}/${pt_id}`);
         dispatch({
             type : GET_SHOE ,
             payload : res.data
@@ -47,7 +47,7 @@ export const getShoe = (backlog_id, pt_id, history) => async dispatch => {
 
 export const updateShoe = (backlog_id, pt_id, shoe, history)=>async dispatch=>{
     try{
-        await axios.patch(`/api/backlog/${backlog_id}/${pt_id}`,shoe);
+        await axios.patch(`https://rosetta.cfapps.io/api/backlog/${backlog_id}/${pt_id}`,shoe);
         history.push(`/collectionBoard/${backlog_id}`)
         dispatch({
             type : GET_ERRORS,
@@ -65,7 +65,7 @@ export const updateShoe = (backlog_id, pt_id, shoe, history)=>async dispatch=>{
 
 export const deleteShoe = (backlog_id , pt_id)=> async dispatch =>{
     if(window.confirm(`vous ete sure de supprimer cet chaussure ${pt_id} ?`)){
-        await axios.delete(`/api/backlog/${backlog_id}/${pt_id}`);
+        await axios.delete(`https://rosetta.cfapps.io/api/backlog/${backlog_id}/${pt_id}`);
         dispatch({
             type: DELETE_SHOE,
             payload: pt_id,
