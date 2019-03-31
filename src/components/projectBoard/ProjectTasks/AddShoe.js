@@ -61,7 +61,7 @@ class AddShoe extends Component {
                             <Link to={`/collectionBoard/${id}`} className="btn btn-light">
                                Retour vers liste des Collection
                             </Link>
-                            <h4 className="display-4 text-center"> Ajout shoe</h4>
+                            <h4 className="display-4 text-center"> Ajout d'un chaussure </h4>
                             <form onSubmit={this.onSubmit}>
                                 <div className="form-group">
                                     <input type="text" className={classnames("form-control form-control-lg",{

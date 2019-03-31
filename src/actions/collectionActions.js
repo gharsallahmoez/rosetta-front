@@ -40,7 +40,7 @@ export const getCollection = (id, history)  => async dispatch => {
     }
 }
     export const deleteCollection = id => async dispatch =>{
-    if(window.confirm("vous ete sure de supprimer cette collection ?"))
+    if(window.confirm("êtes-vous sûr de vouloir supprimer cette collection ?"))
     {
         await axios.delete(`${axiosInstance_baseURL}/api/collection/${id}`);
         dispatch({

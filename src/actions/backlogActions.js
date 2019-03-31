@@ -64,7 +64,7 @@ export const updateShoe = (backlog_id, pt_id, shoe, history)=>async dispatch=>{
 }
 
 export const deleteShoe = (backlog_id , pt_id)=> async dispatch =>{
-    if(window.confirm(`vous ete sure de supprimer cet chaussure ${pt_id} ?`)){
+    if(window.confirm(`êtes-vous sûr de vouloir supprimer la chaussure ${pt_id} ?`)){
         await axios.delete(`${axiosInstance_baseURL}/api/backlog/${backlog_id}/${pt_id}`);
         dispatch({
             type: DELETE_SHOE,

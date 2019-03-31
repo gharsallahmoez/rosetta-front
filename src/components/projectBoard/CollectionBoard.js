@@ -54,7 +54,7 @@ class CollectionBoard extends Component {
         return (
             <div className="container">
                 <Link to={`/addShoe/${id}`} className="btn btn-primary mb-3">
-                    <i className="fas fa-plus-circle"> ajouter nouveau chaussure </i>
+                    <i className="fas fa-plus-circle"> Ajouter une Nouvelle Chaussure </i>
                 </Link>
                 <br />
                 <hr />

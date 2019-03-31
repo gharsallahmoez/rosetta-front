@@ -31,12 +31,12 @@ class CollectionItem extends Component {
                                 </Link>
                                 <Link to={`/updateCollection/${collection.collectionIdentifier}`}>
                                     <li className="list-group-item update">
-                                        <i className="fa fa-edit pr-1"> mettre a jour une collection</i>
+                                        <i className="fa fa-edit pr-1"> Mettre à jour cette collection</i>
                                     </li>
                                 </Link>
 
                                     <li className="list-group-item delete" onClick={this.onDeleteClick.bind(this,collection.collectionIdentifier)}>
-                                        <i className="fa fa-minus-circle pr-1"> Supprimer collection</i>
+                                        <i className="fa fa-minus-circle pr-1"> Supprimer cette collection</i>
                                     </li>
 
                             </ul>

@@ -95,12 +95,12 @@ class UpdateShoe extends Component {
                     <div className="row">
                         <div className="col-md-8 m-auto">
                             <Link
-                                to={`/atelierBoard/${this.state.collectionIdentifier}`}
+                                to={`/collectionBoard/${this.state.collectionIdentifier}`}
                                 className="btn btn-light"
                             >
-                                retour vers Atelier Board
+                                retour vers le Tableau des Collections
                             </Link>
-                            <h4 className="display-4 text-center">Mettre a jour chaussure</h4>
+                            <h4 className="display-4 text-center">Mettre à jour chaussure </h4>
                             <p className="lead text-center">
                                 Nom Chaussure: {this.state.collectionIdentifier} | ID Chaussure :{" "}
                                 {this.state.collectionSequence}{" "}
